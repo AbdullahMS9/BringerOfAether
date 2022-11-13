@@ -21,6 +21,8 @@ public:
 		float health = 100;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Stats")
 		float magic = 100;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Stats")
+        int level = 1;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Stats")
 		TArray<TSubclassOf<UPlayerEffect>> playerOptions;
 
