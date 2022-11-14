@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS(Blueprintable, BlueprintType)
+UCLASS(Blueprintable, BlueprintType, meta = (ShowWorldContextPin))
 class BRINGEROFAETHER_API UPlayerEffect : public UObject
 {
 	GENERATED_BODY()
