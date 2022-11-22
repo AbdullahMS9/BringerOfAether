@@ -19,8 +19,10 @@ public:
 		FString effectName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Option")
 		float effectAmount;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Option")
+		float effectCost;
 
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Player Option")
-		void OnActivated(APlayerCharacter* sourceCharacter, APlayerCharacter* targetCharacter);
+		void OnActivated(UActorStatsComponent* playerStats, UActorStatsComponent* opponentStats);
 	
 };
