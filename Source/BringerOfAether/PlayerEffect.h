@@ -23,6 +23,6 @@ public:
 		float effectCost;
 
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Player Option")
-		void OnActivated(UActorStatsComponent* playerStats, UActorStatsComponent* opponentStats);
+		void OnActivated(UActorStatsComponent* activator, UActorStatsComponent* other);
 	
 };

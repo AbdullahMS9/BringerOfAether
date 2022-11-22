@@ -7,6 +7,7 @@
 #include "Components/ActorComponent.h"
 #include "ActorStatsComponent.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FComponentCustomStartSignature);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class BRINGEROFAETHER_API UActorStatsComponent : public UActorComponent
@@ -34,5 +35,13 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	UPROPERTY(BlueprintCallable, BlueprintAssignable, Category = "Custom")
+		FComponentCustomStartSignature OnTakeDamage;
+	UPROPERTY(BlueprintCallable, BlueprintAssignable, Category = "Custom")
+		FComponentCustomStartSignature OnHeal;
+	UPROPERTY(BlueprintCallable, BlueprintAssignable, Category = "Custom")
+		FComponentCustomStartSignature OnSimpleAttack;
+	UPROPERTY(BlueprintCallable, BlueprintAssignable, Category = "Custom")
+		FComponentCustomStartSignature OnMagicAttack;
 		
 };
